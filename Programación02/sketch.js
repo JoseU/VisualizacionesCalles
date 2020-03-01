@@ -51,8 +51,8 @@ function draw() {
     var numObjetos = Object.keys(callesOpt).length
 
    
-    var catCompA = ["Masculino", "Femenino", "Lugar", "Cultura", "Botanica", "Zoología", "Conmemoraciones", "Etnias/Filiaciones culturales", "Colectivo / Organización", "n/a"  ];
-    var catCompB = ["Mas.", "Fem.", "Lugar", "Cult.", "Bot.", "Zoo.", "Con.", "Etn.", "Col/Org.", "n/a"  ];
+    var catCompA = ["Masculino", "Femenino", "Lugar", "Tradiciones y costumbres", "Botanica", "Zoología", "Conmemoraciones", "Etnias/Filiaciones culturales", "Colectivo / Organización", "n/a"  ];
+    var catCompB = ["Mas.", "Fem.", "Lugar", "Trad.C.", "Bot.", "Zoo.", "Con.", "Etn.", "Col/Org.", "n/a"  ];
 
 
 
