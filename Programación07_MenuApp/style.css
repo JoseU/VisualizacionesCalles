@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+#side_bar {
+    position: fixed;
+    width: 240px;
+    height: 100%;
+    background: #151719;
+    left: -240px;
+    transition: all 500ms linear;
+}
+
+#side_bar.active {
+    left: 0px;
+}
+
+#side_bar ul li {
+    color: white;
+    font-size: small;
+    list-style: none;
+    padding: 15px 10px;
+    border: 1px solid rgba(100, 100, 100, 0.3);
+}
+
+#side_bar .toggle-btn {
+    position: absolute;
+    left: 260px;
+    top: 15px;
+}
+
+#side_bar .toggle-btn span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #151719;
+    margin: 5px 0px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+canvas {
+    display: block;
+}
