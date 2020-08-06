@@ -1,0 +1,14 @@
+{
+  "name": "@margretwg/d3-zoomable-sunburst",
+  "main": "ec45891e43e8f3d1@405.js",
+  "version": "405.0.0",
+  "homepage": "https://observablehq.com/@margretwg/d3-zoomable-sunburst",
+  "author": {
+    "name": "margretwg",
+    "url": "https://observablehq.com/@margretwg"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}

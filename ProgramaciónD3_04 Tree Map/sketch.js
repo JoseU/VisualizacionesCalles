@@ -49,21 +49,21 @@ d3.json("http://pcalles.masakisanto.net/index.php/ws/tcategorias", function (
   var arrprincipal = data.filter(
     (resp) => resp.idtipocategoria == 11 && resp.categoria != "n/a"
   );
-  let total=0;
-for (const iterator of arrprincipal) {
-    total+=iterator.total*1;
-}
-console.log(total)
+  let total = 0;
+  for (const iterator of arrprincipal) {
+    total += iterator.total * 1;
+  }
+  console.log(total);
   for (const iterator of arrprincipal) {
     tree.children.push({
       name: iterator.categoria,
       colname: iterator.categoria,
       value: iterator.total,
-      porcentaje: ((iterator.total*100)/total).toFixed(0) 
+      porcentaje: ((iterator.total * 100) / total).toFixed(0),
     });
   }
 
-  console.log(tree);
+  console.log(JSON.stringify(data));
 
   var root = d3.hierarchy(tree).sum((d) => {
     return d.value;
@@ -104,14 +104,14 @@ console.log(total)
     .attr("x", function (d) {
       return d.x0 + 5;
     }) // +10 to adjust position (more right)
-    .attr("y", function (d,i) {
-        if (i == 0) {
-            return d.y0 + 30;
-          } else if (i == 1 || i == 4 || i == 5) {
-            return d.y0 + 30;
-          } else {
-            return d.y0 + 15;
-          }
+    .attr("y", function (d, i) {
+      if (i == 0) {
+        return d.y0 + 30;
+      } else if (i == 1 || i == 4 || i == 5) {
+        return d.y0 + 30;
+      } else {
+        return d.y0 + 15;
+      }
     }) // +20 to adjust position (lower)
     .text(function (d, i) {
       if (i == 2) {
@@ -137,12 +137,12 @@ console.log(total)
       }
     })
     .attr("fill", (d, i) => {
-        if (i == 3) {
-            return "#696969";
-          }
-          if (i == 6) {
-            return "#696969";
-          }
+      if (i == 3) {
+        return "#696969";
+      }
+      if (i == 6) {
+        return "#696969";
+      }
       if (i == 0) {
         return "white";
       } else {
@@ -159,14 +159,14 @@ console.log(total)
     .attr("x", function (d) {
       return d.x0 + 5;
     }) // +10 to adjust position (more right)
-    .attr("y", function (d,i) {
-        if (i == 0) {
-            return d.y0 + 60;
-          } else if (i == 1 || i == 4 || i == 5) {
-            return d.y0 + 60;
-          } else {
-            return d.y0 + 28;
-          }
+    .attr("y", function (d, i) {
+      if (i == 0) {
+        return d.y0 + 60;
+      } else if (i == 1 || i == 4 || i == 5) {
+        return d.y0 + 60;
+      } else {
+        return d.y0 + 28;
+      }
       return d.y0 + 40;
     }) // +20 to adjust position (lower)
     .text(function (d) {
@@ -184,19 +184,19 @@ console.log(total)
       }
     })
     .attr("fill", (d, i) => {
-        if (i == 3) {
-            return "#696969";
-          }
-          if (i == 6) {
-            return "#696969";
-          }
+      if (i == 3) {
+        return "#696969";
+      }
+      if (i == 6) {
+        return "#696969";
+      }
       if (i == 0) {
         return "white";
       } else {
         return "white";
       }
     });
-    svg
+  svg
     .selectAll("title")
     .data(root.leaves())
     .enter()
@@ -204,18 +204,18 @@ console.log(total)
     .attr("x", function (d) {
       return d.x0 + 5;
     }) // +10 to adjust position (more right)
-    .attr("y", function (d,i) {
-        if (i == 0) {
-            return d.y0 + 90;
-          } else if (i == 1 || i == 4 || i == 5) {
-            return d.y0 + 90;
-          } else {
-            return d.y0 + 45;
-          }
+    .attr("y", function (d, i) {
+      if (i == 0) {
+        return d.y0 + 90;
+      } else if (i == 1 || i == 4 || i == 5) {
+        return d.y0 + 90;
+      } else {
+        return d.y0 + 45;
+      }
       return d.y0 + 40;
     }) // +20 to adjust position (lower)
     .text(function (d) {
-      return d.data.porcentaje+"%";
+      return d.data.porcentaje + "%";
     })
 
     .attr("font-family", "Mukta")
@@ -229,12 +229,12 @@ console.log(total)
       }
     })
     .attr("fill", (d, i) => {
-        if (i == 3) {
-            return "#696969";
-          }
-          if (i == 6) {
-            return "#696969";
-          }
+      if (i == 3) {
+        return "#696969";
+      }
+      if (i == 6) {
+        return "#696969";
+      }
       if (i == 0) {
         return "white";
       } else {
